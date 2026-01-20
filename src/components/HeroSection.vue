@@ -30,7 +30,7 @@ const emit = defineEmits(['scrollToAbout', 'scrollToContact'])
           :initial="{ opacity: 0, x: 50 }"
           :enter="{ opacity: 1, x: 0, transition: { duration: 1000, delay: 200 } }"
         >
-          RANGE NAIR
+          Hrishikesh Sajeev
         </h1>
 
         <!-- Bio Section -->
