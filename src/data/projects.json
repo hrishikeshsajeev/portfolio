@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Comparative analysis of ML and LLM models in S&P500 Prediction",
+        "description": "An in-depth study comparing traditional Machine Learning models against Large Language Models for financial market prediction.",
+        "category": "Machine Learning",
+        "image": null,
+        "repo_url": "https://github.com/hrishikeshsajeev/SP500Prediction-LLMandML",
+        "default_branch": "main",
+        "tags": [
+            "Python",
+            "SQL",
+            "BigQuery",
+            "Predictive Modelling"
+        ],
+        "highlights": [
+            "Analysed historical S&P500 data over 4 years to identify market trends.",
+            "Implemented and compared SVM and LLM based predicitive approaches.",
+            "LLM achieved more return than the SVM at the cost of higher risk."
+        ]
+    }
+]
