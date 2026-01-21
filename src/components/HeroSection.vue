@@ -6,7 +6,7 @@ const emit = defineEmits(['scrollToAbout', 'scrollToContact'])
 </script>
 
 <template>
-  <section class="min-h-screen relative flex flex-col justify-center px-6 md:px-20 py-10">
+  <section class="min-h-screen relative flex flex-col justify-center px-6 md:px-20 py-10 pb-32 md:pb-10">
     <div class="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       
       <!-- Left: Profile Photo -->
