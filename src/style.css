@@ -57,30 +57,3 @@ body {
   transition-duration: 500ms;
   font-family: Inter, sans-serif;
 }
-
-/* Global Cursor Hide */
-/* Global Cursor Hide */
-html,
-body,
-* {
-  cursor: none !important;
-}
-
-a:hover,
-button:hover,
-input:hover,
-a:active,
-button:active,
-input:active,
-a:focus,
-button:focus,
-input:focus {
-  cursor: none !important;
-}
-
-/* Re-enable for touch to avoid confusion */
-@media (hover: none) {
-  * {
-    cursor: auto !important;
-  }
-}

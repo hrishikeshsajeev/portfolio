@@ -43,7 +43,7 @@ const emit = defineEmits(['scrollToAbout', 'scrollToContact'])
           <h2 class="text-2xl text-secondary font-light">A bit about me!</h2>
           <div class="p-6 border border-cyan-500/30 rounded-lg bg-transparent">
             <p class="text-lg text-secondary leading-relaxed">
-              MSc Finance Graduate from University of Bath. I enjoy using data to provide actionable business recommendations.
+              MSc Finance Graduate from University of Bath. I enjoy using data and AI tools to provide actionable business recommendations.
             </p>
           </div>
         </div>

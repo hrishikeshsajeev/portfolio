@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue'
 import ThemeToggle from './components/ThemeToggle.vue'
 import Preloader from './components/Preloader.vue'
 import ParticlesBackground from './components/ParticlesBackground.vue'
-import CustomCursor from './components/CustomCursor.vue'
+
 
 const isLoading = ref(true)
 
@@ -18,7 +18,7 @@ onMounted(() => {
 
 <template>
   <div class="min-h-screen text-text overflow-hidden relative">
-    <CustomCursor />
+
     <Preloader :loading="isLoading" />
     <ParticlesBackground color="34, 211, 238" />
 
