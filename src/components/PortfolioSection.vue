@@ -47,7 +47,7 @@ onMounted(() => {
   <section class="min-h-screen w-full px-6 py-20 relative">
     <div class="max-w-7xl mx-auto">
       <h2 
-        class="text-5xl font-thin text-white mb-16 text-center tracking-wide"
+        class="text-5xl font-thin text-foreground mb-16 text-center tracking-wide"
         v-motion
         :initial="{ opacity: 0, y: 30 }"
         :visible="{ opacity: 1, y: 0, transition: { duration: 1000 } }"
@@ -80,7 +80,7 @@ onMounted(() => {
     <!-- Scroll Down Button -->
     <button 
       @click="$emit('scrollToContact')"
-      class="absolute bottom-10 right-6 md:right-20 p-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-300 group"
+      class="absolute bottom-10 right-6 md:right-20 p-3 rounded-full border border-border text-foreground hover:bg-foreground hover:text-background transition-all duration-300 group"
       v-motion
       :initial="{ opacity: 0, scale: 0.8 }"
       :visible="{ opacity: 1, scale: 1, transition: { delay: 1000, duration: 1000 } }"

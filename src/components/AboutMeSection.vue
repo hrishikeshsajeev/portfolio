@@ -13,7 +13,7 @@ const skills = [
 </script>
 
 <template>
-  <section class="min-h-screen relative flex flex-col items-center justify-center px-4 md:px-10 py-20 text-white">
+  <section class="min-h-screen relative flex flex-col items-center justify-center px-4 md:px-10 py-20 text-foreground">
     
     <h2 
       class="text-4xl md:text-5xl font-light mb-16 tracking-wide"
@@ -50,10 +50,10 @@ const skills = [
         
         <!-- Education -->
         <div class="mb-8">
-          <h4 class="text-lg font-medium mb-2 text-white/90">Education</h4>
+          <h4 class="text-lg font-medium mb-2 text-foreground/90">Education</h4>
           <ul class="list-disc list-inside text-secondary text-sm md:text-base space-y-1">
             <li>MSc Finance with Risk Management - University of Bath
-              <ul class="list-[circle] list-inside ml-5 mt-1 text-white/60">
+              <ul class="list-[circle] list-inside ml-5 mt-1 text-foreground/60">
                 <li>Grades : Distinction</li>
               </ul>
             </li>
@@ -62,7 +62,7 @@ const skills = [
 
         <!-- Certifications -->
         <div>
-          <h4 class="text-lg font-medium mb-4 text-white/90">Certifications</h4>
+          <h4 class="text-lg font-medium mb-4 text-foreground/90">Certifications</h4>
           <div class="space-y-4">
             <a 
               href="https://portal.bloombergforeducation.com/certificates/CsXm1wq8kU495HgM8872UwEf" 
@@ -108,7 +108,7 @@ const skills = [
     <!-- Scroll Down Button -->
     <button 
       @click="$emit('scrollToPortfolio')"
-      class="absolute bottom-6 md:bottom-10 right-6 md:right-20 p-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-300 group"
+      class="absolute bottom-6 md:bottom-10 right-6 md:right-20 p-3 rounded-full border border-border text-foreground hover:bg-foreground hover:text-background transition-all duration-300 group"
       v-motion
       :initial="{ opacity: 0, scale: 0.8 }"
       :visible="{ opacity: 1, scale: 1, transition: { delay: 1000, duration: 1000 } }"

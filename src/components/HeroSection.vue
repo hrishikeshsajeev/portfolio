@@ -16,7 +16,7 @@ const emit = defineEmits(['scrollToAbout', 'scrollToContact'])
         :initial="{ opacity: 0, scale: 0.8 }"
         :enter="{ opacity: 1, scale: 1, transition: { duration: 1000 } }"
       >
-        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-border shadow-2xl">
           <img :src="profileImage" alt="Hrishikesh Sajeev" class="w-full h-full object-cover" />
         </div>
       </div>
@@ -25,7 +25,7 @@ const emit = defineEmits(['scrollToAbout', 'scrollToContact'])
       <div class="text-left space-y-8">
         <!-- Name -->
         <h1 
-          class="text-5xl md:text-7xl font-sans font-light text-white tracking-tight"
+          class="text-5xl md:text-7xl font-sans font-light text-foreground tracking-tight"
           v-motion
           :initial="{ opacity: 0, x: 50 }"
           :enter="{ opacity: 1, x: 0, transition: { duration: 1000, delay: 200 } }"
@@ -57,15 +57,15 @@ const emit = defineEmits(['scrollToAbout', 'scrollToContact'])
       :initial="{ opacity: 0, y: 20 }"
       :enter="{ opacity: 1, y: 0, transition: { duration: 1000, delay: 800 } }"
     >
-      <a href="https://drive.google.com/file/d/1o0-4Paka0VtxxYxODrtrAWmYQfhfr_8H/view?usp=share_link" target="_blank" class="px-6 py-2 border border-white text-white font-medium rounded-lg hover:bg-gradient-to-r hover:from-cyan-500 hover:to-sky-500 hover:border-transparent transition-all duration-300">
+      <a href="https://drive.google.com/file/d/1o0-4Paka0VtxxYxODrtrAWmYQfhfr_8H/view?usp=share_link" target="_blank" class="px-6 py-2 border border-foreground text-foreground font-medium rounded-lg hover:bg-gradient-to-r hover:from-cyan-500 hover:to-sky-500 hover:border-transparent hover:text-white transition-all duration-300">
         Resume
       </a>
-      <a href="https://www.linkedin.com/in/hrishikeshsajeev05/" target="_blank" class="px-6 py-2 border border-white text-white font-medium rounded-lg hover:bg-gradient-to-r hover:from-cyan-500 hover:to-sky-500 hover:border-transparent transition-all duration-300">
+      <a href="https://www.linkedin.com/in/hrishikeshsajeev05/" target="_blank" class="px-6 py-2 border border-foreground text-foreground font-medium rounded-lg hover:bg-gradient-to-r hover:from-cyan-500 hover:to-sky-500 hover:border-transparent hover:text-white transition-all duration-300">
         LinkedIn
       </a>
       <button 
         @click="$emit('scrollToContact')"
-        class="px-6 py-2 border border-white text-white font-medium rounded-lg hover:bg-gradient-to-r hover:from-cyan-500 hover:to-sky-500 hover:border-transparent transition-all duration-300"
+        class="px-6 py-2 border border-foreground text-foreground font-medium rounded-lg hover:bg-gradient-to-r hover:from-cyan-500 hover:to-sky-500 hover:border-transparent hover:text-white transition-all duration-300"
       >
         Contact me
       </button>
@@ -74,7 +74,7 @@ const emit = defineEmits(['scrollToAbout', 'scrollToContact'])
     <!-- Scroll Down Button -->
     <button 
       @click="$emit('scrollToAbout')"
-      class="absolute bottom-10 right-6 md:right-20 p-4 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-300 group"
+      class="absolute bottom-10 right-6 md:right-20 p-4 rounded-full border border-border text-foreground hover:bg-foreground hover:text-background transition-all duration-300 group"
       v-motion
       :initial="{ opacity: 0, scale: 0.8 }"
       :enter="{ opacity: 1, scale: 1, transition: { duration: 1000, delay: 1000 } }"

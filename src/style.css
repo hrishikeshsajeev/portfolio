@@ -6,6 +6,8 @@
   --primary: #2563eb;
   --secondary: #64748b;
   --text: #0f172a;
+  --foreground: #1f2937;
+  --border: rgba(0, 0, 0, 0.2);
 }
 
 .dark {
@@ -16,6 +18,8 @@
   --primary: #10b981;
   --secondary: #a3a3a3;
   --text: #ededed;
+  --foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.2);
 }
 
 @theme {
@@ -24,6 +28,8 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-text: var(--text);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
 
   --font-sans: Inter, sans-serif;
 }

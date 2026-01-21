@@ -34,7 +34,7 @@ const contactMethods = [
 </script>
 
 <template>
-  <section class="min-h-screen relative flex flex-col items-center justify-center px-6 py-20 text-white">
+  <section class="min-h-screen relative flex flex-col items-center justify-center px-6 py-20 text-foreground">
     <div class="max-w-3xl w-full">
       
       <h2 
@@ -69,13 +69,13 @@ const contactMethods = [
             :initial="{ opacity: 0, x: -20 }"
             :visible="{ opacity: 1, x: 0, transition: { delay: 300 + (index * 100), duration: 500 } }"
           >
-            <div class="p-3 rounded-lg bg-surface/50 border border-white/10 group-hover:bg-white/20 group-hover:border-white/20 transition-colors mr-5">
-              <component :is="method.icon" class="w-6 h-6 text-white" />
+            <div class="p-3 rounded-lg bg-surface/50 border border-border group-hover:bg-primary/20 group-hover:border-primary/20 transition-colors mr-5">
+              <component :is="method.icon" class="w-6 h-6 text-foreground" />
             </div>
             
             <div class="flex-grow">
               <h3 class="text-sm font-medium text-secondary group-hover:text-white/80 transition-colors">{{ method.label }}</h3>
-              <p class="text-lg text-white font-light">{{ method.value }}</p>
+              <p class="text-lg text-foreground font-light">{{ method.value }}</p>
             </div>
 
             <ExternalLink v-if="method.isExternal" class="w-5 h-5 text-secondary opacity-0 group-hover:opacity-100 transition-opacity absolute right-6" />

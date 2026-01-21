@@ -1,5 +1,10 @@
 <script setup>
-const options = {
+import { useDark } from '@vueuse/core'
+import { computed } from 'vue'
+
+const isDark = useDark()
+
+const options = computed(() => ({
   particles: {
     number: {
       value: 62,
@@ -9,7 +14,7 @@ const options = {
       }
     },
     color: {
-      value: "#ffffff"
+      value: isDark.value ? "#ffffff" : "#1f2937"
     },
     shape: {
       type: "circle"
@@ -38,7 +43,7 @@ const options = {
     links: {
       enable: false,
       distance: 150,
-      color: "#ffffff",
+      color: isDark.value ? "#ffffff" : "#1f2937",
       opacity: 0.4,
       width: 1
     },
@@ -98,11 +103,12 @@ const options = {
     }
   },
   detectRetina: true
-}
+}))
 </script>
 
 <template>
   <vue-particles
+    :key="isDark ? 'dark' : 'light'"
     id="particles-js"
     class="fixed inset-0 pointer-events-none z-0"
     :options="options"
