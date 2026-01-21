@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --surface: #f3f4f6;
-  --primary: #2563eb;
+  --primary: #06b6d4;
   --secondary: #64748b;
   --text: #0f172a;
   --foreground: #1f2937;
@@ -15,7 +15,7 @@
   /* Deep clean black */
   --surface: #171717;
   /* Neutral dark grey */
-  --primary: #10b981;
+  --primary: #22d3ee;
   --secondary: #a3a3a3;
   --text: #ededed;
   --foreground: #ffffff;

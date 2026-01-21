@@ -4,7 +4,6 @@ import { ref, onMounted } from 'vue'
 import ThemeToggle from './components/ThemeToggle.vue'
 import Preloader from './components/Preloader.vue'
 import ParticlesBackground from './components/ParticlesBackground.vue'
-import MixBlendCursor from './components/MixBlendCursor.vue'
 
 
 const isLoading = ref(true)
@@ -22,7 +21,6 @@ onMounted(() => {
 
     <Preloader :loading="isLoading" />
     <ParticlesBackground color="34, 211, 238" />
-    <MixBlendCursor />
 
     <header class="fixed top-0 left-0 right-0 p-6 z-50 flex justify-end items-center mix-blend-difference text-white">
       <ThemeToggle />

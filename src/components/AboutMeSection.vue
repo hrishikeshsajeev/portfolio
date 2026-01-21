@@ -34,9 +34,28 @@ const skills = [
         :visible="{ opacity: 1, y: 0, transition: { duration: 800, delay: 100 } }"
       >
         <h3 class="text-2xl font-normal mb-6">Bio</h3>
-        <p class="text-secondary text-sm md:text-base leading-relaxed font-light">
-          MSc Finance graduate combining strong domain knowledge with technical proficiency in SQL, Python, Tableau, and Excel. Confident self-starter, with excellent communication skills built by collaborating with stakeholders across multiple levels. Passionate about delving into data to uncover insights and applying machine learning techniques and AI to solve complex challenges as evidenced by dissertation on AI and ML. A critical thinker with a growth mindset, eager to join a fast paced team to build upon my analytical skills while providing value to the firm.
-        </p>
+        <ul class="text-secondary text-sm md:text-base leading-relaxed font-light space-y-3">
+          <li class="flex items-start">
+            <span class="mr-2 mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+            <span>MSc Finance graduate from the University of Bath, combining strong domain knowledge in Finance with technical proficiency in SQL, Python, Tableau, and Excel.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-2 mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+            <span>Passionate about delving into data to uncover insights and applying machine learning techniques and AI to answer complex questions.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-2 mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+            <span>Skilled in prompting thoroughly and leveraging AI-Augmented development tools like Cursor, Antigravity and Claude Code to accelerate coding workflows and technical implementation.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-2 mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+            <span>A critical thinker with a growth mindset, eager to join a fast-paced team to build upon my skills while providing value to the firm.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-2 mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+            <span>Confident self-starter with excellent communication skills built by collaborating with stakeholders across multiple levels.</span>
+          </li>
+        </ul>
       </div>
 
       <!-- Column 2: Qualifications -->
