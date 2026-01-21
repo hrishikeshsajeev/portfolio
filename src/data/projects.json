@@ -18,5 +18,25 @@
             "Implemented and compared SVM and LLM based predicitive approaches.",
             "LLM achieved more return than the SVM at the cost of higher risk."
         ]
+    },
+    {
+        "id": 2,
+        "name": "United Airlines Fleet and Route Analysis",
+        "description": "Detailed analysis of fleet efficiency and route profitability.",
+        "category": "Data Analysis",
+        "image": "/united-route-profitability.png",
+        "repo_url": "https://github.com/hrishikeshsajeev/United-Airlines-Fleet-and-Route-Analysis",
+        "default_branch": "main",
+        "tags": [
+            "Python",
+            "MySQL",
+            "Tableau",
+            "Data Visualization"
+        ],
+        "highlights": [
+            "Analyzed hub dominance and network strategy.",
+            "Identified underperforming routes and fleet mismatches.",
+            "Visualized profitability by aircraft type and route."
+        ]
     }
 ]
