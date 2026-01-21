@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// Dot position (follows instantly or magnetically)
+// Dot position (follows instantly)
 const dotX = ref(0)
 const dotY = ref(0)
 
@@ -17,39 +17,19 @@ const hasMixBlend = ref(false)
 // Lerp values (higher = faster)
 const dotLerp = 1.0      // Instant follow
 const circleLerp = 0.08  // Trailing effect (lazier)
-const magnetStrength = 0.7 // How strongly cursor is pulled to center (0-1)
 
 let animationFrame = null
 let targetX = 0
 let targetY = 0
-let mouseX = 0  // Actual mouse position
-let mouseY = 0
-let hoveredElement = null
 
 const updateTarget = (e) => {
-  mouseX = e.clientX
-  mouseY = e.clientY
-  
-  // If hovering over an interactive element, apply magnetic pull
-  if (hoveredElement) {
-    const rect = hoveredElement.getBoundingClientRect()
-    const centerX = rect.left + rect.width / 2
-    const centerY = rect.top + rect.height / 2
-    
-    // Calculate magnetic pull towards element center
-    targetX = mouseX + (centerX - mouseX) * magnetStrength
-    targetY = mouseY + (centerY - mouseY) * magnetStrength
-  } else {
-    // Normal behavior - follow mouse exactly
-    targetX = mouseX
-    targetY = mouseY
-  }
-  
+  targetX = e.clientX
+  targetY = e.clientY
   if (!isVisible.value) isVisible.value = true
 }
 
 const animate = () => {
-  // Dot follows target (either mouse or magnetic position)
+  // Dot follows instantly
   dotX.value += (targetX - dotX.value) * dotLerp
   dotY.value += (targetY - dotY.value) * dotLerp
   
@@ -68,27 +48,14 @@ const checkHover = (e) => {
   hasMixBlend.value = !!mixBlendEl
   
   // Check if hovering over interactive elements
-  const interactiveEl = target.closest(
+  const isInteractive = target.closest(
     'a, button, input, textarea, [data-cursor-hover], .interactive, [role="button"]'
   )
-  
-  // Store reference to hovered element for magnetic calculation
-  hoveredElement = interactiveEl
-  isHovering.value = !!interactiveEl
-  
-  // If we just started hovering, recalculate target immediately
-  if (interactiveEl) {
-    const rect = interactiveEl.getBoundingClientRect()
-    const centerX = rect.left + rect.width / 2
-    const centerY = rect.top + rect.height / 2
-    targetX = mouseX + (centerX - mouseX) * magnetStrength
-    targetY = mouseY + (centerY - mouseY) * magnetStrength
-  }
+  isHovering.value = !!isInteractive
 }
 
 const handleMouseLeave = () => {
   isVisible.value = false
-  hoveredElement = null
 }
 
 const handleMouseEnter = () => {
@@ -127,7 +94,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- The Dot - follows mouse or magnetically attaches -->
+  <!-- The Dot - follows mouse instantly -->
   <div 
     class="cursor-dot"
     :class="{ 
